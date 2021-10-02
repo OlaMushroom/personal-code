@@ -21,8 +21,7 @@ int main()
 {
     int n;
     int m;
-    cin>>n;
-    cin>>m;
+    cin>>n>>m;
     int x = bai2a(n, m);
     cout<<x;
     return 0;
