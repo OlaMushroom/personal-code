@@ -13,7 +13,7 @@ int bai2a (int n, int m)
         a = (a * i) % m;
         S = (S + a) % m;
         i = i + 1;
-    };
+    }
     return S;
 }
 
