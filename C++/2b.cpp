@@ -19,9 +19,7 @@ int bai2b (int n, int m, int k)
 
 int main()
 {
-    int n;
-    int m;
-    int k;
+    int n; int m; int k;
     cin>>n>>m>>k;
     int x = bai2b(n, m, k);
     cout<<x;
