@@ -12,15 +12,14 @@ int bai2a (int n, int m)
     {
         a = (a * i) % m;
         S = (S + a) % m;
-        i = i + 1;
+        i++;
     }
     return S;
 }
 
 int main()
 {
-    int n;
-    int m;
+    int n;int m;
     cin>>n>>m;
     int x = bai2a(n, m);
     cout<<x;
