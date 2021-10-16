@@ -6,18 +6,10 @@ using namespace std;
 int bai1e (int n)
 {
     int S = 1;
-    int i = 2;
-    while (i <= n)
+    while (n > 1)
     {
-        if (n % 2 == 0)
-        {
-            S = S * i;
-        }
-        else
-        {
-            S = S * (i + 1);
-        }
-        i = i + 2;
+        S = S * n;
+        n -= 2;
     }
     return S;
 }
