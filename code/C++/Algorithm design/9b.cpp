@@ -11,7 +11,7 @@ int bai9b (int n)
     {
         i = n % 10;
         S = S * 10 + i;
-        n/=10;
+        n /= 10;
     }
     return S;
 }
