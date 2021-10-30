@@ -11,7 +11,7 @@ int bai9c (int n)
     while (n != 0)
     {
         x = n % 10;
-        i = i + abs(x - y);
+        i += abs(x - y);
         y = x;
         n /= 10;
     }
