@@ -11,7 +11,7 @@ int bai9d (int n)
     while (n != 0)
     {
         x = n % 10;
-        if ((abs(x - y) > i))
+        if (i < abs(x - y))
         {
             i = abs(x - y);
         }
