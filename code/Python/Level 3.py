@@ -395,7 +395,7 @@ button.grid(row=4,column=2)
 
 window.mainloop()'''
 
-'''import tkinter 
+import tkinter 
 
 color = {
     'background': '#062F33',
@@ -463,4 +463,4 @@ ans_display(question_list[current_question][1])
 score_frame = tkinter.Frame(window, width=300, height= 500, bg=color['score_bg'])
 score_frame.grid(row=0,column=1)
 
-window.mainloop()```
+window.mainloop()
