@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int baitap (int n)
+int func (int n)
 {
     int i = 0;
     int S = 9;
@@ -24,9 +24,8 @@ int main()
 {
     freopen("TASK29.INP","r",stdin);
     freopen("TASK29.OUT","w",stdout);
-    int n;
-    cin>>n;
-    int a = baitap(n);
+    int n;cin>>n;
+    int a = func(n);
     cout<<a;
     return 0;
 }
