@@ -4,8 +4,7 @@
 #include <cmath>
 
 using namespace std;
-#define maxN 1000000
-int a[maxN], n, x;
+int a[1000000], n, x;
 
 void input()
 {
