@@ -10,7 +10,7 @@ high_score=0
 
 # thiet lap mang hinh
 wn=turtle.Screen()
-wn.title("Snake Game by Mahesh Sawant")
+wn.title(".")
 wn.bgcolor("green")
 wn.setup(width=600, height=600)
 
