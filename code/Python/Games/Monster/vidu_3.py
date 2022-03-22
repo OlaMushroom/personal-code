@@ -57,7 +57,6 @@ bulletspeed = 20
 #trang thai sung Sieu anh hùng
 bulletstate = "ready"
 
-
 #---------------------------
 # Tao ra quai vat
 bulletspeed_quaivat = 20
@@ -340,8 +339,3 @@ while True:
             winsound.PlaySound('over.wav', winsound.SND_FILENAME)
             win_pen.write("YOU ARE WIN!!!", False, align="left", font=("Arial", 40, "normal"))
             break
-            
-
-
-	
-		
