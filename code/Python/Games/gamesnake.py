@@ -13,7 +13,6 @@ class cube(object):
         self.dirny = 0
         self.color = color
 
-        
     def move(self, dirnx, dirny):
         self.dirnx = dirnx
         self.dirny = dirny
@@ -32,10 +31,7 @@ class cube(object):
             circleMiddle2 = (i*dis + dis -radius*2, j*dis+8)
             pygame.draw.circle(surface, (0,0,0), circleMiddle, radius)
             pygame.draw.circle(surface, (0,0,0), circleMiddle2, radius)
-        
-
-
-
+            
 class snake(object):
     body = []
     turns = {}
@@ -50,7 +46,6 @@ class snake(object):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-
             keys = pygame.key.get_pressed()
 
             for key in keys:
@@ -73,4 +68,3 @@ class snake(object):
                     self.dirnx = 0
                     self.dirny = 1
                     self.turns[self.head.pos[:]] = [self.dirnx, self.dirny]
-
