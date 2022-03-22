@@ -2,7 +2,6 @@ import turtle
 import random
 import math
 
-
 sc=turtle.Screen()
 sc.bgpic("space.gif")
 mypen=turtle.Turtle()
@@ -171,15 +170,3 @@ while True:
     if bullet.yor() > 275:
         bullet.hideturtle()
         bulletstate = "ready"
-
-
-
-
-
-
-
-
-
-
-
-        
