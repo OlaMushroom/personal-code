@@ -22,8 +22,6 @@ win_pen.penup()
 win_pen.setposition(-200,50)
 win_pen.hideturtle()
 
-
-    
 # thiết lập màn hình đồ họa
 sc = turtle.Screen()
 #thiết lập hình ảnh nền cho màn hình đồ họa
@@ -120,7 +118,6 @@ timestring = str(giay)
 time_pen.write(timestring, False, align="left", font= ("Arial", 20, "normal"))
 time_pen.hideturtle()
 
-
 #Set the score to 0
 score = 0
 #Draw the score
@@ -160,8 +157,6 @@ def move_right():
 	if x > 280:
 		x = 280
 	player.setx(x)
-
-
 
 def isCollision(t1, t2):
     distance = math.sqrt(math.pow(t1.xcor()-t2.xcor(),2)+math.pow(t1.ycor()-t2.ycor(),2))
@@ -207,14 +202,12 @@ def fire_bullet_quatvat():
           sung.setposition(x, y)
           sung.showturtle()
 
-
 # khi nhấn phím
 
 turtle.onkey(move_left, "Left")
 turtle.onkey(move_right, "Right")
 turtle.onkey(fire_bullet, "space")
 turtle.listen()
-
 
 #Main game loop
 while True:
@@ -226,7 +219,6 @@ while True:
     time_pen.write(timestring, False, align="left", font= ("Arial", 20, "normal"))
     time_pen.hideturtle()
         
-
     #Move the enemy
     x = enemy.xcor()
     x += enemyspeed
@@ -244,8 +236,7 @@ while True:
     if sung.ycor() < -275:
             sung.hideturtle()
             bulletstate_quaivat = "ready"
-    
-   
+
 #Move the enemy back and down
     if enemy.xcor() > 280:
     #Move all enemies down
@@ -264,8 +255,6 @@ while True:
             enemy.sety(y)
             #Change enemy direction
             enemyspeed *= -1
-			
-    
 
     #Check for a collision between the bullet and the enemy
     if isCollision(bullet, enemy):
@@ -304,8 +293,6 @@ while True:
             score_pen_quaivat.clear()
             score_pen_quaivat.write(scorestring_quaivat, False, align="left", font=("Arial", 14, "normal"))
 
-
-
     # va cham nguoi choi va quai vat        
 
     if isCollision(player, enemy):
@@ -316,7 +303,6 @@ while True:
             print ("Game Over")
             break
 
-		
     #Move the bullet
     if (bulletstate == "fire"):
             y = bullet.ycor()
