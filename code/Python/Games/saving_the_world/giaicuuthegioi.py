@@ -78,7 +78,6 @@ def boundaryChecking(t):
         t.right(180)
         t.setposition(random.randint(-300,300),random.randint(-300,300))
 
-
 #vong lap game
 while True:
     #thiet lap sieu anh hung di ve phia truoc
@@ -96,6 +95,3 @@ while True:
     goal.left(random.randint(10,180))
     #kiem tra quai vat co cham bien
     boundaryChecking(goal)
-    
-    
-
