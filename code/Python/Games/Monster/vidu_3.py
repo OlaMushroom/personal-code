@@ -4,17 +4,16 @@ import math
 import random
 import winsound
 import time
-#-------------------------------------------
+#-------------------------
 # Khai bao over game
-
 over_pen = turtle.Turtle()
 over_pen.speed(0)
 over_pen.color("yellow")
 over_pen.penup()
 over_pen.setposition(-200,50)
 over_pen.hideturtle()
-# Khai bao player win
 
+# Khai bao player win
 win_pen = turtle.Turtle()
 win_pen.speed(0)
 win_pen.color("yellow")
@@ -22,9 +21,8 @@ win_pen.penup()
 win_pen.setposition(-200,50)
 win_pen.hideturtle()
 
-# thiết lập màn hình đồ họa
+# thiết lập màn hình đồ họa và hình ảnh nền
 sc = turtle.Screen()
-#thiết lập hình ảnh nền cho màn hình đồ họa
 sc.bgpic("space.gif")
 
 # Vẽ vùng giới hạn di chuyển:
@@ -37,7 +35,6 @@ mypen.speed(0)
 for i in range(4):
     mypen.forward(600)
     mypen.left(90)
-# vẽ xong, ẩn đối tượng vẽ
 mypen.hideturtle()
 
 # Tạo ra nhân vật siêu anh hùng
@@ -48,10 +45,8 @@ player.shape(image)
 player.penup()
 player.setposition(0, -250)
 player.setheading(90)
-
 playerspeed = 15
 bulletspeed = 20
-
 #trang thai sung Sieu anh hùng
 bulletstate = "ready"
 
@@ -65,7 +60,6 @@ enemy.shape(image)
 enemy.penup()
 enemy.speed(0)
 enemy.setposition(random.randint(-300, 300), random.randint(-100, 300))
-
 enemyspeed = 2
 bulletstate_quaivat="ready"
 
@@ -80,7 +74,6 @@ bullet.shapesize(0.5, 0.5)
 bullet.hideturtle()
 
 #sung cua quai vat
-
 sung = turtle.Turtle()
 sung.color("red")
 sung.shape("circle")
@@ -118,9 +111,8 @@ timestring = str(giay)
 time_pen.write(timestring, False, align="left", font= ("Arial", 20, "normal"))
 time_pen.hideturtle()
 
-#Set the score to 0
+#Set the score to 0 and draw the score
 score = 0
-#Draw the score
 score_pen = turtle.Turtle()
 score_pen.speed(0)
 score_pen.color("white")
@@ -130,9 +122,8 @@ scorestring = "Player: %s" %score
 score_pen.write(scorestring, False, align="left", font=("Arial", 14, "normal"))
 score_pen.hideturtle()
 
-#score quái vat
+#score quai vat
 score_quaivat = 0
-#Draw the score
 score_pen_quaivat = turtle.Turtle()
 score_pen_quaivat.speed(0)
 score_pen_quaivat.color("white")
@@ -150,7 +141,6 @@ def move_left():
 		x = - 280
 	player.setx(x)
 
-	
 def move_right():
 	x = player.xcor()
 	x += playerspeed
@@ -188,7 +178,7 @@ def fire_bullet():
           bullet.setposition(x, y)
           bullet.showturtle()
 
-# Sung cu quai vat
+# Sung cua quai vat
 def fire_bullet_quatvat():
     #Declare bulletstate as a global if it needs changed
     global bulletstate_quaivat
@@ -203,7 +193,6 @@ def fire_bullet_quatvat():
           sung.showturtle()
 
 # khi nhấn phím
-
 turtle.onkey(move_left, "Left")
 turtle.onkey(move_right, "Right")
 turtle.onkey(fire_bullet, "space")
@@ -226,7 +215,6 @@ while True:
 
     # quai vat ban
     fire_bullet_quatvat()
-    #Move the bullet_quaivat
     if (bulletstate_quaivat == "fire"):
             y = sung.ycor()
             y -= bulletspeed_quaivat
@@ -239,8 +227,6 @@ while True:
 
 #Move the enemy back and down
     if enemy.xcor() > 280:
-    #Move all enemies down
-	
             y = enemy.ycor()
             y -= 40
             enemy.sety(y)
@@ -248,8 +234,6 @@ while True:
             enemyspeed *= -1
 		
     if enemy.xcor() < -280:
-        #Move all enemies down
-	
             y = enemy.ycor()
             y -= 40
             enemy.sety(y)
@@ -294,7 +278,6 @@ while True:
             score_pen_quaivat.write(scorestring_quaivat, False, align="left", font=("Arial", 14, "normal"))
 
     # va cham nguoi choi va quai vat        
-
     if isCollision(player, enemy):
             winsound.PlaySound('explosion.wav', winsound.SND_FILENAME)
             #os.system("afplay explosion.wav&")
