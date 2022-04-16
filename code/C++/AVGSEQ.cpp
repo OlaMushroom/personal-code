@@ -21,7 +21,7 @@ void input ()
 
 }
 
-void output ()
+void avgseq ()
 {
     a[0] = b[0]; cout<<a[0]<<" ";
     for (int i = 1; i < n; ++i)
@@ -35,6 +35,6 @@ int main()
 {
     freopen("AVGSEQ.INP","r",stdin);
     freopen("AVGSEQ.OUT","w",stdout);
-    input();output();
+    input(); avgseq();
     return 0;
 }
