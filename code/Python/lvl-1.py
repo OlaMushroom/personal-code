@@ -1,4 +1,3 @@
-# Level 2:
 # 8/11/2020:
 # Switch variable:
 '''
